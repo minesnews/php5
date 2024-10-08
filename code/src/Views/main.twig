@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <style>{{ style }}</style>
+        <link href="style.css" rel="stylesheet" >
+    </head>
+    <body>
+    <nav>
+    {% include 'header.twig' %}
+        <a class="text" href="/">Главная</a>
+        <a class="text" href="/user">Пользователи</a>
+        <a href="/about">О нас</a>
+        <a href="/404">Страница 404</a>
+        <pre>
+        Текущая дата: {{ "now"|date("m/d/Y") }}
+        
+        </pre>
+    </nav>
+        {% include content_template_name %}
+        {% include 'footer.twig' %}
+    </body>
+</html>
